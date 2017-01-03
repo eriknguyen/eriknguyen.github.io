@@ -1,0 +1,134 @@
+@mixin clearfix {
+    &:before, &:after {
+        content: '';
+        display: table;
+    } //before, after
+    &:after {
+        clear: both;
+    } //after 
+}
+
+@mixin vertical-center {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin totally-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin vertical-center-child ($childClass) {
+    position: relative;
+    #{$childClass} {
+        @include vertical-center;
+    }
+}
+
+@mixin totally-center-child ($childClass) {
+    position: relative;
+    #{$childClass} {
+        @include totally-center;
+    }
+}
+
+
+@mixin aspect-ratio($contentClass, $width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > #{$contentClass} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+@mixin responsive-map($property, $value-map, $breakpoint-map: $breakpoints) {
+    @each $breakpoint, $value in $value-map {
+        @if $breakpoint==null {
+            #{$property}: $value;
+        }
+        @else {
+            // if $value is a key that exists in $breakpoint-map, use the value
+            @if map-has-key($breakpoint-map, $breakpoint) {
+                $breakpoint: map-get($breakpoint-map, $breakpoint);
+            }
+            @media screen and (max-width: $breakpoint) {
+                #{$property}: $value;
+            }
+        }
+    }
+}
+
+@function font-source-declaration(
+    $font-family,
+    $file-path,
+    $file-formats) {
+
+    $src: ();
+
+    $formats-map: (
+            eot:   "#{$file-path}.eot?#iefix" format("embedded-opentype"),
+            woff2: "#{$file-path}.woff2" format("woff2"),
+            woff:  "#{$file-path}.woff" format("woff"),
+            ttf:   "#{$file-path}.ttf" format("truetype")
+    );
+
+    @each $key, $values in $formats-map {
+        @if contains($file-formats, $key) {
+            $file-path: nth($values, 1);
+            $font-format: nth($values, 2);
+            $src: append($src, url($file-path) $font-format, comma);
+        }
+    }
+
+    @return $src;
+}
+
+@mixin font-face(
+    $font-family,
+    $file-path,
+    $weight: normal,
+    $style: normal,
+    $file-formats: eot woff2 woff ttf) {
+
+    @font-face {
+        font-family: $font-family;
+        font-style: $style;
+        font-weight: $weight;
+
+        src: font-source-declaration(
+                        $font-family,
+                        $file-path,
+                        $file-formats
+        );
+    }
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+    // If $fs-font-size is a list, include
+    // both font-size and line-height
+    @if type-of($fs-font-size)=="list" {
+        font-size: nth($fs-font-size, 1);
+        @if (length($fs-font-size) > 1) {
+            line-height: nth($fs-font-size, 2);
+        }
+    }
+    @else {
+        font-size: $fs-font-size;
+    }
+}
