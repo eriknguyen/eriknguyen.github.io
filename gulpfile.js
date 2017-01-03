@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     fs = require('fs'),
     path = require('path'),
     merge = require('merge-stream'),
-    imagemin = rqeuire('gulp-imagemin'),
+    imagemin = require('gulp-imagemin'),
     clean = require('del'),
     browserSync = require('browser-sync').create();
 
@@ -52,7 +52,7 @@ gulp.task('js', function() {
     var folders = getFolders(paths.js.folder);
     var tasks = folders.map(function(folder) {
         return gulp.src(path.join(paths.js.folder, folder.path, '/*.js'))
-            // .pipe(uglify())
+            .pipe(uglify())
             .pipe(concat(folder.name + '.min.js'))
             .on('error', function(err) {
                 displayError(err);
@@ -66,8 +66,8 @@ gulp.task('js', function() {
 gulp.task('sass', function() {
     return gulp.src(paths.styles.src)
         .pipe(sass({
-            outputStyle: 'compact',
-            sourceComments: 'map'
+            outputStyle: 'compressed'/*,
+            sourceComments: 'map'*/
         }))
         .pipe(autoprefix())
         .on('error', function(err) {

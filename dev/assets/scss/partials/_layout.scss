@@ -1,0 +1,86 @@
+.container {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.panel {
+    position: relative;
+}
+
+.section-wrapper {
+    @include vertical-center;
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.section-note {
+    position: absolute;
+    bottom: 30px;
+}
+
+.section-heading {
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: bold;
+    color: $color-secondary;
+    &.--white {
+        color: white;
+    }
+}
+
+.section-tagline {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 18px;
+    &:focus,
+    &:hover {
+        font-weight: bold;
+        color: $color-secondary;
+    }
+}
+
+.--highlight {
+    color: $color-secondary;
+    font-weight: bold;
+}
+
+.--comment {
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+    .section-note {
+        position: absolute;
+        bottom: 30px;
+    }
+    .section-heading {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+    .section-tagline {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+    .contact-info {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    .--comment {
+        font-size: 14px;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+}
