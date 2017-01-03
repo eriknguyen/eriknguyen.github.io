@@ -35,7 +35,7 @@ $(window).scroll(function(event) {
 	prevpage = (currentpage <= 1) ? 1 : currentpage - 1;
 
 	if (!animatingup) {
-		if ($(window).scrollTop() + $(window).height() >= $(panelId + (nextpage)).offset().top + 50) {
+		if ($(window).scrollTop() + $(window).height() >= $(panelId + (nextpage)).offset().top + 100) {
 			if (nextpage > currentpage) {
 				var p2 = $(panelId + (nextpage));
 				var pageheight = p2.position().top;
@@ -53,7 +53,7 @@ $(window).scroll(function(event) {
 	}
 
 	if (!animatingdown) {
-		if ($(panelId + (currentpage)).offset().top - $(window).scrollTop() >= 50) {
+		if ($(panelId + (currentpage)).offset().top - $(window).scrollTop() >= 100) {
 			if (prevpage < currentpage) {
 				var p2 = $(panelId + (prevpage));
 				var pageheight = p2.position().top;
