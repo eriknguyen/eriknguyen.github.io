@@ -5,6 +5,7 @@ references
 .sass-cache
 .idea
 
+__pycache__
 
 dist
 dev
