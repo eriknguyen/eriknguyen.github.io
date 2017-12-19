@@ -1,1 +1,72 @@
-<!DOCTYPE html><html><head><title>&#60;Dev&#62; with &#60;3 by Erik</title><meta charset=utf-8><meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no"><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><link rel=icon type=image/png href={{ url_for( 'static', filename=img/favicon.png ) }}><link rel=stylesheet type=text/css href={{ url_for( 'static', filename=css/style.css ) }}></head><body><section id=panel_1 class="panel __full-height"><div class=container><div class=section-wrapper id=welcome_section><div class="section-heading --white">Hello... World!</div><div class=section-tagline>Welcome to <span class=--highlight>{Dev}Erik</span></div><div class=section-content></div></div><div class=section-note>...down there</div></div></section><section id=panel_2 class="panel __full-height"><div class=container><div class=section-wrapper><div class=section-heading>About me</div><div class=section-tagline>Hmm... yes, my name is Erik</div><div class=section-content>I'm a front end developer based in Singapore.<br>I love creating website.<br>I make fancy designs work and talk. <span class=--comment>// well, I'm trying to make my ugly designs work as well</span><br>I love soccer too!<br></div></div><div class=section-note>...</div></div></section><section id=panel_3 class="panel __full-height"><div class=container><div class=section-wrapper><div class=section-heading>My pieces of code</div><div class=section-tagline>I promise to update this as soon as possible!</div><div class=section-content></div></div><div class=section-note>...more to come</div></div></section><section id=panel_4 class="panel __full-height"><div class=container><div class=section-wrapper><div class=section-heading>Contact me</div><div class=section-tagline>I would definitely love to talk</div><div class=section-content><a class=contact-info href=mailto:eriknguyen.dev@gmail.com target=_blank>&#62; email</a> <a class=contact-info href="https://github.com/eriknguyen/" target=_blank>&#62; github</a> <a class=contact-info href=https://twitter.com/namkhanh164 target=_blank>&#62; twitter</a></div></div><div class=section-note>...thanks for scrolling until this point :)</div></div></section><script type=text/javascript src={{ url_for( 'static', filename=js/vendor.min.js ) }}></script><script type=text/javascript src={{ url_for( 'static', filename=js/app.min.js ) }}></script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>&#60;Dev&#62; with &#60;3 by Erik</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name=mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+    <link rel=icon type=image/png href={{ url_for( 'static', filename="img/favicon.png" ) }}>
+    <link rel=stylesheet type=text/css href={{ url_for( 'static', filename="css/style.css" ) }}>
+</head>
+
+<body>
+    <section id=panel_1 class="panel __full-height">
+        <div class=container>
+            <div class=section-wrapper id=welcome_section>
+                <div class="section-heading --white">Hello... World!</div>
+                <div class=section-tagline>Welcome to
+                    <span class=--highlight>{Dev}Erik</span>
+                </div>
+                <div class=section-content></div>
+            </div>
+            <div class=section-note>...down there</div>
+        </div>
+    </section>
+    <section id=panel_2 class="panel __full-height">
+        <div class=container>
+            <div class=section-wrapper>
+                <div class=section-heading>About me</div>
+                <div class=section-tagline>Hmm... yes, my name is Erik</div>
+                <div class=section-content>I'm a front end developer based in Singapore.
+                    <br>I love creating website.
+                    <br>I make fancy designs work and talk.
+                    <span class=--comment>// well, I'm trying to make my ugly designs work as well</span>
+                    <br>I love soccer too!
+                    <br>
+                </div>
+            </div>
+            <div class=section-note>...</div>
+        </div>
+    </section>
+    <section id=panel_3 class="panel __full-height">
+        <div class=container>
+            <div class=section-wrapper>
+                <div class=section-heading>My pieces of code</div>
+                <div class=section-tagline>I promise to update this as soon as possible!</div>
+                <div class=section-content></div>
+            </div>
+            <div class=section-note>...more to come</div>
+        </div>
+    </section>
+    <section id=panel_4 class="panel __full-height">
+        <div class=container>
+            <div class=section-wrapper>
+                <div class=section-heading>Contact me</div>
+                <div class=section-tagline>I would definitely love to talk</div>
+                <div class=section-content>
+                    <a class=contact-info href=mailto:eriknguyen.dev@gmail.com target=_blank>&#62; email</a>
+                    <a class=contact-info href="https://github.com/eriknguyen/" target=_blank>&#62; github</a>
+                    <a class=contact-info href=https://twitter.com/namkhanh164 target=_blank>&#62; twitter</a>
+                </div>
+            </div>
+            <div class=section-note>...thanks for scrolling until this point :)</div>
+        </div>
+    </section>
+    <script type=text/javascript src={{ url_for( 'static', filename='js/vendor.min.js' ) }}></script>
+    <script type=text/javascript src={{ url_for( 'static', filename='js/app.min.js' ) }}></script>
+</body>
+
+</html>

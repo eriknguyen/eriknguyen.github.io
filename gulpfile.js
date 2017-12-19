@@ -38,7 +38,7 @@ var paths = {
 
 gulp.task('html', function() {
     return gulp.src(paths.html.src)
-        .pipe(minifyHTML())
+        // .pipe(minifyHTML({quotes: true}))
         .on('error', function(err) {
             displayError(err);
         })
