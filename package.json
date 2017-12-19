@@ -16,7 +16,7 @@
     "url": "https://github.com/eriknguyen/eriknguyen.github.io/issues"
   },
   "homepage": "https://github.com/eriknguyen/eriknguyen.github.io#readme",
-    "devDependencies": {
+  "devDependencies": {
     "browser-sync": "^2.18.1",
     "del": "^2.2.2",
     "gulp": "^3.9.1",

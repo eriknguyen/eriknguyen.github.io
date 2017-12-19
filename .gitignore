@@ -8,6 +8,4 @@ references
 __pycache__
 
 dist
-dev
-gulpfile.js
 venv
