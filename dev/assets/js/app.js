@@ -4,6 +4,7 @@ var ERIKNG = {
         fullHeight: $('.__full-height')
     },
     resizeTimer: undefined, // use Timeout with a timer to call scrolltocurrent only when resize event done
+    currentpage: (document.location.hash) ? parseInt(document.location.hash.replace(panelId, '')) : 1,
     const: {
         pages: 4,
         panelId: '#panel_'
@@ -43,9 +44,9 @@ var ERIKNG = {
         var _this = this,
             pages = this.const.pages,
             panelId = this.const.panelId,
-            resizeTimer = this.resizeTimer;
+            resizeTimer = this.resizeTimer,
+            currentpage = this.currentpage;
         
-        var currentpage = (document.location.hash) ? parseInt(document.location.hash.replace(panelId, '')) : 1;
         var nextpage = (currentpage >= pages) ? pages : currentpage + 1;
         var prevpage = (currentpage <= 1) ? 1 : currentpage - 1;
         
@@ -100,7 +101,8 @@ var ERIKNG = {
         });
     },
     scrolltocurrent: function() {
-        var p2 = $(panelId + (currentpage));
+        var _this = this;
+        var p2 = $(_this.panelId + (_this.currentpage));
         var pageheight = p2.position().top;
         $('html, body').animate({
             scrollTop: pageheight
