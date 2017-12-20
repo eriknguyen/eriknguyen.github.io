@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build",
+    "server": "source ./venv/bin/activate && python app.py"
   },
   "repository": {
     "type": "git",
