@@ -8,8 +8,8 @@
     <meta name=mobile-web-app-capable content=yes>
     <meta name=apple-mobile-web-app-capable content=yes>
     <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
-    <link rel=icon type=image/png href={{ url_for( 'static', filename="img/favicon.png" ) }}>
-    <link rel=stylesheet type=text/css href={{ url_for( 'static', filename="css/style.css" ) }}>
+    <link rel=icon type=image/png href={{ url_for( 'static', filename="img/favicon.png", _external=True ) }}>
+    <link rel=stylesheet type=text/css href={{ url_for( 'static', filename="css/style.css", _external=True ) }}>
 </head>
 
 <body>
@@ -65,8 +65,8 @@
             <div class=section-note>...thanks for scrolling until this point :)</div>
         </div>
     </section>
-    <script type=text/javascript src={{ url_for( 'static', filename='js/vendor.min.js' ) }}></script>
-    <script type=text/javascript src={{ url_for( 'static', filename='js/app.min.js' ) }}></script>
+    <script type=text/javascript src={{ url_for( 'static', filename='js/vendor.min.js', _external=True ) }}></script>
+    <script type=text/javascript src={{ url_for( 'static', filename='js/app.min.js', _external=True ) }}></script>
 </body>
 
 </html>

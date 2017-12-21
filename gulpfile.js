@@ -9,7 +9,12 @@ var gulp = require('gulp'),
     merge = require('merge-stream'),
     imagemin = require('gulp-imagemin'),
     clean = require('del'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    util = require('gulp-util');
+
+var config = {
+    production: !!util.env.production
+};
 
 var paths = {
     html: {
@@ -52,7 +57,7 @@ gulp.task('js', function() {
     var folders = getFolders(paths.js.folder);
     var tasks = folders.map(function(folder) {
         return gulp.src(path.join(paths.js.folder, folder.path, '/*.js'))
-            .pipe(uglify())
+            .pipe(config.production ? uglify() : util.noop())
             .pipe(concat(folder.name + '.min.js'))
             .on('error', function(err) {
                 displayError(err);
@@ -65,10 +70,14 @@ gulp.task('js', function() {
 
 gulp.task('sass', function() {
     return gulp.src(paths.styles.src)
-        .pipe(sass({
-            outputStyle: 'compressed'/*,
-            sourceComments: 'map'*/
-        }))
+        .pipe(config.production ? 
+            sass({
+                outputStyle: 'compressed'
+            }) : sass({
+                outputStyle: 'compact',
+                sourceComments: 'map',
+                includePaths: [paths.styles.src]
+            }))
         .pipe(autoprefix())
         .on('error', function(err) {
             displayError(err);

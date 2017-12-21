@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build",
+    "test": "gulp --production",
+    "build": "gulp build --production",
     "server": "source ./venv/bin/activate && python app.py"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "gulp-minify-html": "^1.0.6",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "merge-stream": "^1.0.0"
   }
 }
