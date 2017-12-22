@@ -1,14 +1,18 @@
+// TODO: dynamic pages by getting number of panels
+$(document).ready(function() {
+    ERIKNG.init();
+})
 
 var ERIKNG = {
 	el: {
         fullHeight: $('.__full-height')
     },
     resizeTimer: undefined, // use Timeout with a timer to call scrolltocurrent only when resize event done
-    currentpage: (document.location.hash) ? parseInt(document.location.hash.replace(panelId, '')) : 1,
     const: {
         pages: 4,
         panelId: '#panel_'
     },
+    currentpage: (document.location.hash) ? parseInt(document.location.hash.replace('#panel_', '')) : 1,
 	init: function() {
         this.initFullHeightPanel();
         this.initOrientationChangeHandler();
@@ -63,6 +67,7 @@ var ERIKNG = {
             prevpage = (currentpage <= 1) ? 1 : currentpage - 1;
         
             if (!animatingup) {
+                var pageId = panelId + nextpage;
                 if ($(window).scrollTop() + $(window).height() >= $(panelId + (nextpage)).offset().top + 80) {
                     if (nextpage > currentpage) {
                         var p2 = $(panelId + (nextpage));
@@ -116,7 +121,3 @@ var ERIKNG = {
         return check;
     }
 }
-
-ERIKNG.init();
-
-// TODO: dynamic pages by getting number of panels
