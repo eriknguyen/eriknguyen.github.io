@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     fs = require('fs'),
     path = require('path'),
     merge = require('merge-stream'),
-    imagemin = rqeuire('gulp-imagemin'),
+    imagemin = require('gulp-imagemin'),
     clean = require('del'),
     browserSync = require('browser-sync').create();
 
