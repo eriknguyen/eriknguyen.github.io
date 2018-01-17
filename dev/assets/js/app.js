@@ -60,7 +60,7 @@ var APP = {
       console.log("added");
       _this.el.addToBagBtn.classList.add('cta-button--success');
       _this.el.addToBagBtn.innerHTML = '<span class="checkmark checkmark--checked">Added To Bag</span>';
-    }, 1000);
+    }, 2000);
 
     _this.state.addingProduct = false;
 
