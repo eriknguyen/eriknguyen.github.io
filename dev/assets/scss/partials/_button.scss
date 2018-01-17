@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  height: 54px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &.cta-button {
+    width: 100%;
+    background: $colorButtonPrimary;
+    &.cta-button--success {
+      background: $colorButtonSecondary;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// variable
+$checkmarkColor: #fff;
+
+// Create animation called 'check'
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 10px;
+  }
+  50% {
+    height: 20px;
+    width: 10px;
+  }
+}
+
+.checkmark {
+  display: block;
+  position: relative;
+  height: 54px;
+  line-height: 54px;
+  width: 100%;
+  text-align: center;
+  
+  &:after {
+    transform: translateX(-90px) scaleX(-1) rotate(180deg + -45deg);
+    transform-origin: left top;
+
+    // The borders
+    border-right: 4px solid $checkmarkColor;
+    border-top: 4px solid $checkmarkColor;
+
+    // Positioning and stuff
+    content: "";
+    display: block;
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 26px;
+    width: 10px;
+  }
+
+  &.checkmark--checked:after {
+    animation: check 1.5s;
+  }
+}

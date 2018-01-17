@@ -53,10 +53,21 @@ var APP = {
     var _this = this;
     // simulate the button animation
     // adding product
+    _this.el.addToBagBtn.innerHTML = '<span class="loader"><span></span><span></span><span></span></span>';
 
     // product added to bag
+    setTimeout(function() {
+      console.log("added");
+      _this.el.addToBagBtn.classList.add('cta-button--success');
+      _this.el.addToBagBtn.innerHTML = '<span class="checkmark checkmark--checked">Added To Bag</span>';
+    }, 1000);
 
     _this.state.addingProduct = false;
+
+    setTimeout(function() {
+      _this.el.addToBagBtn.classList.remove('cta-button--success');
+      _this.el.addToBagBtn.innerHTML = 'Add To Bag';
+    }, 4000);
   }
 
 }
