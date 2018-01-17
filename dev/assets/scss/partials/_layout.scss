@@ -1,0 +1,74 @@
+body {
+  background: #eee;
+  color: #333;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 414px;
+  height: 736px;
+  min-width: 375px;
+  margin: 60px auto;
+  background-color: white;
+  overflow: hidden;
+}
+
+.action-group {
+  margin: 20px 10px;
+}
+
+.product-action {
+  margin-bottom: 20px;
+}
+
+.select-label {
+  display: inline-block;
+  width: 15%;
+}
+
+.select-box {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  height: 30px;
+  margin-left: 2%;
+  padding: 0 8px;
+  border: 1px solid #aaa;
+  text-align: left;
+  line-height: 30px;
+  
+  &:after {
+    font-family: "fontello";
+    content: '\f107';
+    color: #333;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.button {
+  display: block;
+  height: 54px;
+  text-transform: uppercase;
+  color: #fff;
+
+  &.cta-button {
+    width: 100%;
+    background: #000;
+
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    background: #fff;
+  }
+  .wrapper {
+    width: 100%;
+    margin-top: 0;
+  }
+}

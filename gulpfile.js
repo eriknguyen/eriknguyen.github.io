@@ -137,7 +137,7 @@ gulp.task('watch', function() {
 gulp.task('clean', function() {
     clean('dist/**/*');
 });
-gulp.task('default', ['html', 'js', 'sass', 'image', 'browserSync', 'watch']);
+gulp.task('default', ['html', 'js', 'sass', 'image', 'font', 'browserSync', 'watch']);
 gulp.task('build', ['clean', 'html', 'js', 'sass', 'image', 'font']);
 
 var getFolders = function(dir) {
