@@ -1,10 +1,11 @@
 # ADD TO BAG button animation style
 *Demonstrating 3 different states of Zalora add-to-bag button with CSS animation*
+*Link to demo: [cta.erikng.me](http://cta.erikng.me/)*
 
 ## Up and Running
   * Built result is located at `/dist`
   * Development source is located at `/dev`
-  * For overview of the result, please open `dist/index.html`
+  * For overview of the result, please open `dist/index.html` or [cta.erikng.me](http://cta.erikng.me/)
   * For running using source (`npm` or `yarn` required):
     ```
       npm install
