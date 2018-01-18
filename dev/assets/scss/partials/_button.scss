@@ -7,6 +7,7 @@
   transition: all 0.2s ease-in-out;
   &.cta-button {
     width: 100%;
+    border: none;
     background: $colorButtonPrimary;
     &.cta-button--success {
       background: $colorButtonSecondary;
