@@ -10,7 +10,6 @@
 
 .section-wrapper {
     @include vertical-center;
-    width: 80%;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -109,6 +108,9 @@
     .contact-info {
         margin-bottom: 5px;
         font-size: 18px;
+        > .more-info {
+            display: none;
+        }
     }
     .--comment {
         font-size: 14px;

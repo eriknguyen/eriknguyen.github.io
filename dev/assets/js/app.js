@@ -2,7 +2,7 @@
 $(document).ready(function() {
     // ERIKNG.init();
     $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        anchors: ['home', 'about', 'code', 'contact'],
         css3: true
     });
 })

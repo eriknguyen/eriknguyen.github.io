@@ -8,14 +8,14 @@
     <meta name=mobile-web-app-capable content=yes>
     <meta name=apple-mobile-web-app-capable content=yes>
     <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
-    <link rel=icon type=image/png href={{ url_for( 'static', filename="img/favicon.png", _external=True ) }}>
-    <link rel=stylesheet type=text/css href={{ url_for( 'static', filename="css/style.css", _external=True ) }}>
+    <link rel=icon type=image/png href={{ url_for( 'static', filename="img/favicon.png" , _external=True ) }}>
+    <link rel=stylesheet type=text/css href={{ url_for( 'static', filename="css/style.css" , _external=True ) }}>
 </head>
 
 <body>
     <div id="header"></div>
     <div id="footer"></div>
-    
+
     <div id="fullpage">
         <div class="section " id="section0">
             <div class="panel">
@@ -26,60 +26,69 @@
                     </div>
                     <div class=section-content></div>
                 </div>
-                <div class=section-note>...down there</div>
+                <div class=section-note>...</div>
             </div>
         </div>
         <div class="section" id="section1">
             <div class="panel">
                 <div class=section-wrapper>
-                        <div class=section-heading>About me</div>
-                        <div class=section-tagline>Hmm... yes, my name is Erik</div>
-                        <div class=section-content>I'm a front end developer based in Singapore.
-                            <br>I love creating website.
-                            <br>I make fancy designs work and talk.
-                            <span class=--comment>// well, I'm trying to make my ugly designs work as well</span>
-                            <br>I love soccer too!
-                            <br>
-                        </div>
+                    <div class=section-heading>About me</div>
+                    <div class=section-tagline>Hmm... yes, my name is Erik</div>
+                    <div class=section-content>I'm a software engineer based in Singapore.
+                        <br>I love creating website and I work on the full stack.
+                        <br>I am a developing developer and I enjoy learning everyday.
+                        <br>I love football, photography and I love people too.
                     </div>
-                    <div class=section-note>...</div>
+                </div>
+                <div class=section-note>...</div>
             </div>
         </div>
         <div class="section" id="section2">
             <div class="panel">
-                    <div class=section-wrapper>
-                            <div class=section-heading>My pieces of code</div>
-                            <div class=section-tagline>I will dump them all here, more to come</div>
-                            <div class=section-content>
-                                <a class=contact-info href="http://magixhome.com" target=_blank>&#62; [MagixHome] (What I'm currently building at work)</a>                    
-                                <a class=contact-info href="https://eriknguyen.github.io/mx-panorama/" target=_blank>&#62; [panorama-viewer] (Some fun stuff to play with three.js and some VR gears)</a>
-                                <a class=contact-info href="https://erik-markdown-editor.herokuapp.com/" target=_blank>&#62; [markdown-editor] (A realtime collaborative markdown editor built with Meteor and React)</a>
-                                <a class=contact-info href="https://github-battle-erik.stackblitz.io" target=_blank>&#62; [github-battle] (A dead simple React page)</a>
-                                <a class=contact-info href="https://erik-url-shortener.herokuapp.com/" target=_blank>&#62; [url-shortener] (A simple URL shortener tool)</a>
-                                <a class=contact-info href="javascript:void(0);">&#62; Updating...</a>
-                            </div>
-                        </div>
-                        <div class=section-note>...more to come</div>
+                <div class=section-wrapper>
+                    <div class=section-heading>My pieces of code</div>
+                    <div class=section-tagline>I will dump them all here, more to come</div>
+                    <div class=section-content>
+                        <a class=contact-info href="http://magixhome.com" target=_blank>&#62; [MagixHome] 
+                            <span class="more-info">(What I'm currently building at work)</span>
+                        </a>
+                        <a class=contact-info href="https://eriknguyen.github.io/mx-panorama/" target=_blank>&#62; [panorama-viewer] 
+                            <span class="more-info">(Some fun stuff to play with three.js and some VR gears)</span>
+                        </a>
+                        <a class=contact-info href="https://erik-markdown-editor.herokuapp.com/" target=_blank>&#62; [markdown-editor] 
+                            <span class="more-info">(A realtime collaborative markdown editor built with Meteor and React)</span>
+                        </a>
+                        <a class=contact-info href="https://github-battle-erik.stackblitz.io" target=_blank>&#62; [github-battle] 
+                            <span class="more-info">(A dead simple React page)</span>
+                        </a>
+                        <a class=contact-info href="https://erik-url-shortener.herokuapp.com/" target=_blank>&#62; [url-shortener] 
+                            <span class="more-info">(A simple URL shortener tool)</span>
+                        </a>
+                        <a class=contact-info href="javascript:void(0);">&#62; Updating...</a>
+                    </div>
+                </div>
+                <div class=section-note>...</div>
             </div>
         </div>
         <div class="section" id="section3">
             <div class="panel">
-                    <div class=section-wrapper>
-                            <div class=section-heading>Contact me</div>
-                            <div class=section-tagline>I would definitely love to talk</div>
-                            <div class=section-content>
-                                <a class=contact-info href=mailto:namkhanh164@gmail.com target=_blank>&#62; email</a>
-                                <a class=contact-info href="https://github.com/eriknguyen/" target=_blank>&#62; github</a>
-                                <a class=contact-info href=https://twitter.com/namkhanh164 target=_blank>&#62; twitter</a>
-                            </div>
-                        </div>
-                        <div class=section-note>...thanks for scrolling until this point :)</div>
+                <div class=section-wrapper>
+                    <div class=section-heading>Contact me</div>
+                    <div class=section-tagline>I would definitely love to talk</div>
+                    <div class=section-content>
+                        <a class=contact-info href="mailto:namkhanh164@gmail.com" target=_blank>&#62; email</a>
+                        <a class=contact-info href="https://github.com/eriknguyen/" target=_blank>&#62; github</a>
+                        <a class=contact-info href="https://twitter.com/namkhanh164" target=_blank>&#62; twitter</a>
+                        <a class=contact-info href="https://instagram.com/_eriknguyen" target=_blank>&#62; instagram</a>
+                    </div>
+                </div>
+                <div class=section-note>...thanks for scrolling until this point :)</div>
             </div>
         </div>
     </div>
 
-    <script type=text/javascript src={{ url_for( 'static', filename='js/vendor.min.js', _external=True ) }}></script>
-    <script type=text/javascript src={{ url_for( 'static', filename='js/app.min.js', _external=True ) }}></script>
+    <script type=text/javascript src={{ url_for( 'static', filename='js/vendor.min.js' , _external=True ) }}></script>
+    <script type=text/javascript src={{ url_for( 'static', filename='js/app.min.js' , _external=True ) }}></script>
 </body>
 
 </html>
