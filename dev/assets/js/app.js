@@ -1,6 +1,10 @@
 // TODO: dynamic pages by getting number of panels
 $(document).ready(function() {
-    ERIKNG.init();
+    // ERIKNG.init();
+    $('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        css3: true
+    });
 })
 
 var ERIKNG = {
